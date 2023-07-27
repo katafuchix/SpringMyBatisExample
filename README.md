@@ -1,5 +1,18 @@
 # SpringMyBatisExample
 
+- create MySQL DataBase, Table, insert sample data
+- create project on Eclipse with Spring Starter Project with maven
+- create resources/generatorConfig.xml
+- create Entity, Mapper class, XML File ex) mvn mybatis-generator:generate
+- Add @Data on Entity, @Mapper on Mapper, Define List<Employee> selectAll() on Mapper, XML
+- Add Controller Class / HTML
+- Edit App.java
+- Edit pom.xml
+- Maven install / Build
+- copy war file in Tomcat webapps ( Same Java SDK with Eclipse )
+
+<img width="480"  src="https://github.com/katafuchix/SpringMyBatisExample/assets/6063541/5a555ca4-bfba-4e5b-a3a5-9e8b9580db6e">
+
 - MySQL
 
 ```
