@@ -22,18 +22,13 @@ public class EmployeeController {
 	@GetMapping("list")
 	public ModelAndView listAll() {
 		
-		logger.info("Called getWhiskies.");
-        logger.error("Error getWhiskies.");
+	//logger.info("Called.");
+        //logger.error("Error.");
         
 		ModelAndView mav = new ModelAndView("list");
 		
 		// すべてのユーザーを取得する
 		mav.addObject("employees", employeeMapper.selectAll());
-		
-		System.out.println(""
-				+ ""
-				+ "ああああ");
-		logger.info("access GET sample");
 		return mav;
 	}
 	
