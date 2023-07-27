@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+  <!-- mysql connector -->
+  <classPathEntry
+      location="/Users/cano/.m2/repository/mysql/mysql-connector-java/8.0.23/mysql-connector-java-8.0.23.jar" />
+
+  <context id="context1" >
+  
+    <!-- JDBC -->
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+      connectionURL="jdbc:mysql://localhost:3306/TestDB"
+      userId="root" password="">
+
+      <!-- Table Configuration matched more than one table 対策 -->
+      <!-- http://www.mybatis.org/generator/usage/mysql.html -->
+      <property name="nullCatalogMeansCurrent" value="true"/>
+      
+    </jdbcConnection>
+    
+      <!-- 自動生成するエンティティ -->
+
+      <javaModelGenerator
+          targetPackage="com.example.demo.entity"
+          targetProject="src/main/java/"
+      />
+      <sqlMapGenerator
+          targetPackage="com.example.demo.entity"
+          targetProject="src/main/java/"
+      />
+      <javaClientGenerator
+          targetPackage="com.example.demo.entity"
+          targetProject="src/main/java/"
+          type="XMLMAPPER"
+      />
+
+    <!-- 自動生成対象のテーブル名 -->
+    <table tableName="Employee" domainObjectName="Employee">
+      <generatedKey column="id" sqlStatement="JDBC"/> <!-- auto increament 余計なXMLが入ってしまうため不要かも？ -->
+    </table>
+
+  </context>
+</generatorConfiguration>

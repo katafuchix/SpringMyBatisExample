@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>All Employees List</h1>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>ROLE</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="employee : ${employees}">
+				<td th:text="${employee.id}"></td>
+				<td th:text="${employee.name}"></td>
+				<td th:text="${employee.role}"></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
